@@ -1,6 +1,6 @@
 # Lotus Chat
 Built by James Youngblood (soundeffects)
-Built with Ionic
+Initialized with Ionic 5
 
 <h1>Chat app features level 1</h1>
 <li>Login and profile</li>
