@@ -2,12 +2,16 @@
 Built by James Youngblood (soundeffects)
 Initialized with Ionic 5
 
+== Beyond here is planning ==
+
+settings:
+- notification settings
+- low data mode (no images, etc.), auto-switch on wifi?
+- invisible, do not disturb mode
+
 <h1>Chat app features level 1</h1>
-<li>Login and profile</li>
-<li>Notification Settings</li>
-<li>Data settings</li>
 <li>Main chat</li>
-<li>Private threads built in</li>
+<li>sub-groups and dms, pfps and nicknames for each</li>
 <li>Photo sharing and gallery</li>
 <li>Likes/reactions, mentions</li>
 <li>Time read, online status</li>
