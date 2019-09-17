@@ -1,24 +1,17 @@
 <ion-app>
-  <ion-split-pane>
-    <ion-menu type="overlay">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
-  </ion-split-pane>
+  <ion-menu swipe-gesture max-edge-start=1000 type="push" side="start" menuId="nav">
+    <ion-content padding color="medium">
+      <ion-menu-toggle padding auto-hide="false" *ngFor="let p of pages">
+        <ion-avatar color="secondary" [routerDirection]="'root'" [routerLink]="[p.url]">
+          <div *ngIf="p.icon; else elseBlock">
+            <ion-icon color="secondary" slot="start" [name]="p.icon"></ion-icon>
+          </div>
+          <ng-template #elseBlock>
+            <ion-img src="http://lorempixel.com/640/360"></ion-img>
+          </ng-template>
+        </ion-avatar>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
 </ion-app>

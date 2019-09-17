@@ -4,11 +4,6 @@ Initialized with Ionic 5
 
 == Beyond here is planning ==
 
-settings:
-- notification settings
-- low data mode (no images, etc.), auto-switch on wifi?
-- invisible, do not disturb mode
-
 <h1>Chat app features level 1</h1>
 <li>Main chat</li>
 <li>sub-groups and dms, pfps and nicknames for each</li>
