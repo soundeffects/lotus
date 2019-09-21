@@ -1,16 +1,18 @@
 <ion-app>
   <ion-menu swipe-gesture max-edge-start=1000 type="push" side="start" menuId="nav">
     <ion-content padding color="medium">
-      <ion-menu-toggle padding auto-hide="false" *ngFor="let p of pages">
-        <ion-avatar color="secondary" [routerDirection]="'root'" [routerLink]="[p.url]">
-          <div *ngIf="p.icon; else elseBlock">
-            <ion-icon color="secondary" slot="start" [name]="p.icon"></ion-icon>
-          </div>
-          <ng-template #elseBlock>
-            <ion-img src="http://lorempixel.com/640/360"></ion-img>
-          </ng-template>
-        </ion-avatar>
-      </ion-menu-toggle>
+      <ion-fab>
+        <div *ngFor="let p of pages">
+          <ion-fab-button name="[p.url]" [routerDirection]="'root'" [routerLink]="[p.url]">
+            <ion-icon color="light" [name]="p.icon" *ngIf="p.icon; else elseBlock"></ion-icon>
+            <ng-template #elseBlock>
+              <ion-avatar>
+                <ion-img src="http://lorempixel.com/96/96"></ion-img>
+              </ion-avatar>
+            </ng-template>
+          </ion-fab-button>
+        </div>
+      </ion-fab>
     </ion-content>
   </ion-menu>
   <ion-router-outlet main></ion-router-outlet>
