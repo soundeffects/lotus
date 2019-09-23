@@ -1,17 +1,15 @@
 <ion-app>
   <ion-menu swipe-gesture max-edge-start=1000 type="push" side="start" menuId="nav">
-    <ion-content padding color="medium">
+    <ion-content color="medium">
       <ion-fab>
-        <div *ngFor="let p of pages">
+        <ion-menu-toggle *ngFor="let p of pages">
           <ion-fab-button name="[p.url]" [routerDirection]="'root'" [routerLink]="[p.url]">
             <ion-icon color="light" [name]="p.icon" *ngIf="p.icon; else elseBlock"></ion-icon>
             <ng-template #elseBlock>
-              <ion-avatar>
-                <ion-img src="http://lorempixel.com/96/96"></ion-img>
-              </ion-avatar>
+              <ion-img src="http://lorempixel.com/96/96"></ion-img>
             </ng-template>
           </ion-fab-button>
-        </div>
+        </ion-menu-toggle>
       </ion-fab>
     </ion-content>
   </ion-menu>
