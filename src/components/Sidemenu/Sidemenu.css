@@ -1,0 +1,11 @@
+ion-menu {
+  --width: 5em;
+}
+
+ion-content {
+  --height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
